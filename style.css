@@ -18,6 +18,12 @@ h1 {
   height: 48px;
   line-height: 48px;
 }
+
+.footer {
+  text-align: center;
+  font-size: 12px;
+}
+
 .temperature-container {
   margin-top: 50px;
   padding-right: 30px;
@@ -54,6 +60,9 @@ h1 {
   padding: 10px 25px;
   border-radius: 6px;
   color: #fff;
+}
+.input-form {
+  padding-left: 28px;
 }
 .temperature {
   color: #212121;
