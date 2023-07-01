@@ -30,15 +30,21 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#humidity");
   let descriptionElement = document.querySelector("#description");
   let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon");
+
   cityElement.innerHTML = response.data.name;
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   windElement.innerHTML = `${Math.round(response.data.wind.speed)}km/h`;
   humidityElement.innerHTML = `${Math.round(response.data.main.humidity)}%`;
   descriptionElement.innerHTML = response.data.weather[0].description;
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/04d@2x.png`
+  );
 }
 
 let apiKey = "5b9aaac066641215de6d72f73af7e9b5";
-let city = "Odesa";
+let city = "Paris";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=5b9aaac066641215de6d72f73af7e9b5&units=metric`;
 axios.get(apiUrl).then(displayTemperature);
