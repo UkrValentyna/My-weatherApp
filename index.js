@@ -23,7 +23,6 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
-  console.log(response.data.name);
   let cityElement = document.querySelector("#city");
   let temperatureElement = document.querySelector("#temperature");
   let windElement = document.querySelector("#wind");
@@ -40,11 +39,12 @@ function displayTemperature(response) {
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
   iconElement.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/04d@2x.png`
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 let apiKey = "5b9aaac066641215de6d72f73af7e9b5";
-let city = "Paris";
+let city = "Aberdeen";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=5b9aaac066641215de6d72f73af7e9b5&units=metric`;
 axios.get(apiUrl).then(displayTemperature);
