@@ -77,3 +77,6 @@ h1 {
   top: 5px;
   font-size: 17px;
 }
+.description {
+  text-transform: capitalize;
+}
