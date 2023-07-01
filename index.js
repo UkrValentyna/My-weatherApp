@@ -44,7 +44,18 @@ function displayTemperature(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-let apiKey = "5b9aaac066641215de6d72f73af7e9b5";
-let city = "Aberdeen";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=5b9aaac066641215de6d72f73af7e9b5&units=metric`;
-axios.get(apiUrl).then(displayTemperature);
+function search(city) {
+  let apiKey = "5b9aaac066641215de6d72f73af7e9b5";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=5b9aaac066641215de6d72f73af7e9b5&units=metric`;
+  axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#placeholder");
+  search(cityInputElement.value);
+}
+search();
+
+let form = document.querySelector("#form");
+form.addEventListener("submit", handleSubmit);
