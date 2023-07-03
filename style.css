@@ -34,7 +34,7 @@ h1 {
   padding: 40px;
   max-width: 720px;
   display: block;
-  margin: 30px auto;
+  margin: 50px auto;
 }
 .input-placeholder {
   background: #f9f7fe;
@@ -46,16 +46,18 @@ h1 {
   height: 50px;
   line-height: 20px;
   padding: 15px 20px;
+  box-shadow: 1px 2px 5px #605757;
 }
 .input-submit {
-  background: #9c9b9b;
+  background: #cbc6c6;
   border: none;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   height: 43px;
   padding: 10px 25px;
   border-radius: 6px;
   color: #fff;
+  box-shadow: 1px 2px 5px #605757;
 }
 .input-form {
   padding-left: 28px;
@@ -77,7 +79,7 @@ h1 {
   text-transform: capitalize;
 }
 .active {
-  color: black;
+  color: rgb(51, 50, 50);
   cursor: default;
   text-decoration: none;
 }
