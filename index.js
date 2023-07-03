@@ -23,7 +23,7 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
-  let cityElement = document.querySelector("#city");
+  let city = document.querySelector("#city");
   let temperatureElement = document.querySelector("#temperature");
   let windElement = document.querySelector("#wind");
   let humidityElement = document.querySelector("#humidity");
@@ -31,7 +31,7 @@ function displayTemperature(response) {
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
 
-  cityElement.innerHTML = response.data.name;
+  city.innerHTML = response.data.name;
   temperatureElement.innerHTML = Math.round(response.data.main.temp);
   windElement.innerHTML = `${Math.round(response.data.wind.speed)}km/h`;
   humidityElement.innerHTML = `${Math.round(response.data.main.humidity)}%`;
@@ -55,7 +55,7 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#placeholder");
   search(cityInputElement.value);
 }
-search();
 
 let form = document.querySelector("#form");
 form.addEventListener("submit", handleSubmit);
+search("Odesa");
