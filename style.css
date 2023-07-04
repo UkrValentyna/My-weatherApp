@@ -21,7 +21,7 @@ h1 {
 }
 
 .temperature-container {
-  margin-top: 100px;
+  margin-top: 80px;
   padding-right: 30px;
 }
 
@@ -89,4 +89,13 @@ h1 {
 .info-conteiner {
   box-shadow: 5px 10px 10px #f1ecec;
   border-radius: 5px;
+}
+.forecast-conteiner {
+  margin-top: 50px;
+  text-align: center;
+  box-shadow: 5px 10px 10px #f1ecec;
+}
+.forecast-temperature-max,
+.data {
+  font-weight: 700;
 }
