@@ -32,7 +32,7 @@ function displayForecast() {
       forecastHtml +
       `<div class="col-2">
           <div class="data">${day}</div>
-          <div class="forecast-image"><img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt="rain" widht=40></div>
+          <div class="forecast-image"><img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt="rain" widht=30></div>
           <span class="forecast-temperature-max">17°</span><span class="forecast-temperature-min">12°</span>
         </div>`;
   });
