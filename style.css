@@ -21,7 +21,7 @@ h1 {
 }
 
 .temperature-container {
-  margin-top: 50px;
+  margin-top: 100px;
   padding-right: 30px;
 }
 
@@ -46,10 +46,10 @@ h1 {
   height: 50px;
   line-height: 20px;
   padding: 15px 20px;
-  box-shadow: 1px 2px 5px #605757;
+  box-shadow: 1px 2px 5px #d5cece;
 }
 .input-submit {
-  background: #cbc6c6;
+  background: #da6266;
   border: none;
   font-size: 18px;
   font-weight: 700;
@@ -57,7 +57,7 @@ h1 {
   padding: 10px 25px;
   border-radius: 6px;
   color: #fff;
-  box-shadow: 1px 2px 5px #605757;
+  box-shadow: 1px 2px 5px #b894ce;
 }
 .input-form {
   padding-left: 28px;
@@ -82,4 +82,11 @@ h1 {
   color: rgb(51, 50, 50);
   cursor: default;
   text-decoration: none;
+}
+.small {
+  font-size: 10px;
+}
+.info-conteiner {
+  box-shadow: 5px 10px 10px #f1ecec;
+  border-radius: 5px;
 }
