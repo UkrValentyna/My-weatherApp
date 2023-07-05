@@ -79,7 +79,7 @@ function displayTemperature(response) {
 
   city.innerHTML = response.data.name;
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
-  windElement.innerHTML = `${Math.round(response.data.wind.speed)}km/h`;
+  windElement.innerHTML = `${Math.round(response.data.wind.speed)}m/h`;
   humidityElement.innerHTML = `${Math.round(response.data.main.humidity)}%`;
   descriptionElement.innerHTML = response.data.weather[0].description;
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
@@ -102,31 +102,14 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#placeholder");
   search(cityInputElement.value);
 }
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-}
+
 function displayCelsiusTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
 }
-
-let celsiusTemperature = null;
 
 let form = document.querySelector("#form");
 form.addEventListener("submit", handleSubmit);
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 search("Odesa");
